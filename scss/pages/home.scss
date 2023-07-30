@@ -7,7 +7,7 @@
   background-size: cover;
   background-position: center;
   @media (max-width: 450px) {
-   margin-top: 50px;
+    margin-top: 50px;
   }
   .home__wrapper {
     display: flex;
@@ -92,9 +92,18 @@
         height: 100%;
         background: #fff;
         border-radius: 4px;
-        box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.10);
+        box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
         transition: 0.3s;
+        overflow: hidden;
         cursor: pointer;
+        &:hover {
+          border-radius: 4px;
+          background: var(--main-surface, #fff);
+          box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
+          .stock__img {
+            transform: rotate(2deg) scale(1.1);
+          }
+        }
         &:first-child {
           @media (max-width: 950px) {
             display: none;
@@ -110,16 +119,21 @@
         }
         .stock__img {
           width: 100%;
+          transition: 0.3s;
         }
         .stock__card__intro {
           display: flex;
           flex-direction: column;
           gap: 8px;
           padding: 8px;
+          img {
+            transition: 0.3s;
+          }
           .stock__card__price {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             .stock__card__price__title {
               h5 {
                 @include mxn.h5-title-24(18px);
@@ -350,19 +364,20 @@
     }
     .articles__wrapper__box {
       display: flex;
-      
+
       gap: 40px;
-      transition: .3s;
+      transition: 0.3s;
       @media (max-width: 600px) {
         flex-direction: column;
       }
-      
+
       .articles__wrapper__box__card {
         width: 100%;
         background: #fff;
         border-radius: 4px;
-          box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-        transition: .3s;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+          rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+        transition: 0.3s;
         cursor: pointer;
         &:hover {
           transform: scale(1.035);
@@ -424,5 +439,3 @@
     }
   }
 }
-
-

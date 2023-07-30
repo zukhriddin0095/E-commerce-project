@@ -1,16 +1,6 @@
 @use "../utils/mixins" as mxn;
 
-.header.sticky {
-  padding: 8px;
-  height: 80px;
-  background: #ffffffe2;
-  backdrop-filter: blur(2px);
-  -webkit-box-shadow: 0px 22px 5px -19px rgba(255, 255, 255, 0.75);
-  -moz-box-shadow: 0px 22px 5px -19px rgba(129, 129, 129, 0.75);
-  box-shadow: 0px 22px 5px -19px rgba(118, 118, 118, 0.75);
-  z-index: 10;
-  width: 100%;
-}
+
 
 .header {
   position: fixed;
@@ -31,6 +21,7 @@
   .header__logo {
     display: flex;
     align-items: center;
+    gap: 10px;
     .header__logo__2 {
       display: none;
       @media (min-width: 768px) {
@@ -167,4 +158,16 @@
   }
   }
   
+}
+
+.header.sticky {
+  padding: 8px;
+  height: 80px;
+  background: #ffffffe2;
+  backdrop-filter: blur(2px);
+  -webkit-box-shadow: 0px 22px 5px -19px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 0px 22px 5px -19px rgba(129, 129, 129, 0.75);
+  box-shadow: 0px 22px 5px -19px rgba(118, 118, 118, 0.75);
+  z-index: 10;
+  width: 100%;
 }

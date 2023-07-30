@@ -32,15 +32,15 @@
           color: #1da1f2;
           transform: scale(1.1) skewx(5deg);
         }
-        @media (max-width: 450px) {
-          font-size: 12px;
-          &:last-child {
-            display: none;
-          }
-          &:nth-child(5) {
-            display: none;
-          }
-        }
+        // @media (max-width: 450px) {
+        //   font-size: 12px;
+        //   &:last-child {
+        //     display: none;
+        //   }
+        //   &:nth-child(5) {
+        //     display: none;
+        //   }
+        // }
       }
     }
     .footer__wrapper__bside {
