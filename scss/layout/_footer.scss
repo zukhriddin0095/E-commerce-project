@@ -203,9 +203,12 @@
 .footer__mobile {
   padding: 8px 0;
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   background: #fff;
+  -webkit-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6);
+-moz-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6);
+box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6);
   z-index: 100;
   display: none;
   @media (max-width: 450px) {

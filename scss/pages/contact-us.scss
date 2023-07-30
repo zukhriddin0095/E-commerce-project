@@ -1,1 +1,142 @@
-@use "../global"
+@use "../global";
+@use "../utils/mixins" as mxn;
+
+.contact {
+  background: var(--main-bg-page, #fbf8ec);
+  margin-top: 80px;
+  padding-top: 27px;
+  padding-bottom: 80px;
+  .contact__wrapper {
+    .contact__links {
+      margin-top: 24px;
+      margin-bottom: 27px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      a {
+        color: var(--main-on-surface, #414141);
+        font-family: "Rubik";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        &:last-child {
+          color: var(--grayscale-hard, #8f8f8f);
+        }
+      }
+    }
+    h3 {
+      margin-bottom: 40px;
+      @include mxn.h3-title(64px);
+      @media (max-width: 500px) {
+        @include mxn.h3-title(36px);
+      }
+    }
+    .contact__callcenter {
+      margin-bottom: 120px;
+      display: flex;
+      gap: 80px;
+      @media (max-width: 650px) {
+        flex-direction: column;
+      }
+      h5 {
+        color: var(--main-on-surface, #414141);
+        font-family: "Rubik";
+        font-size: 24px;
+        line-height: 150%;
+        &:first-child {
+          &::before {
+            padding-right: 8px;
+            content: url("../../images/contact/home.png");
+          }
+        }
+        &:nth-child(2) {
+          &::before {
+            padding-right: 8px;
+            content: url("../../images/contact/home.png");
+          }
+        }
+      }
+      a {
+        color: var(--main-on-surface, #414141);
+        font-family: "Rubik";
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 150%;
+        text-decoration-line: underline;
+      }
+    }
+    h5 {
+      color: var(--main-on-surface, #414141);
+      font-family: "Rubik";
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+    }
+    .location__btns {
+      margin-top: 40px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      a {
+        padding: 8px;
+        @include mxn.btn-secondary;
+      }
+    }
+    .contact__store {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+      @media (max-width: 800px) {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        width: 100%;
+      }
+      @media (max-width: 430px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+      }
+      .contact__store__inform {
+        width: 100%;
+          margin-bottom: 32px;
+        .contact__inform__tell {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          
+          h5 {
+            color: var(--main-on-surface, #414141);
+            font-family: "Rubik";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            @media (max-width: 400px) {
+              font-size: 16px;
+            }
+          }
+          a {
+            color: var(--main-on-surface, #414141);
+            font-family: "Rubik";
+            font-size: 18px;
+            line-height: 150%;
+            text-decoration-line: underline;
+            @media (max-width: 400px) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .contact__location {
+      width: 100%;
+      iframe {
+        width: 100%;
+        // border: 2px solid #414141;
+      }
+    }
+  }
+}

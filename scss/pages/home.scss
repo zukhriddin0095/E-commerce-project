@@ -6,6 +6,9 @@
   background: url("../../images/home/home-section.png") no-repeat;
   background-size: cover;
   background-position: center;
+  @media (max-width: 450px) {
+   margin-top: 50px;
+  }
   .home__wrapper {
     display: flex;
     align-items: center;

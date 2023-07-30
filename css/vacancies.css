@@ -442,9 +442,10 @@ input:focus {
 .footer__mobile {
   padding: 8px 0;
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   background: #fff;
+  box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6);
   z-index: 100;
   display: none;
 }
@@ -476,4 +477,127 @@ input:focus {
   font-family: "Rubik";
   font-size: 8px;
   line-height: 150%; /* 12px */
+}
+
+.vacancies {
+  margin-top: 80px;
+  padding-top: 27px;
+  padding-bottom: 80px;
+  background: var(--main-bg-page, #fbf8ec);
+}
+.vacancies .vacancies__links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.vacancies .vacancies__links a {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.vacancies .vacancies__links a:last-child {
+  color: var(--grayscale-hard, #8f8f8f);
+}
+.vacancies .vacancies__title {
+  margin-top: 27px;
+  margin-bottom: 60px;
+}
+.vacancies .vacancies__title h3 {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+@media (max-width: 500px) {
+  .vacancies .vacancies__title h3 {
+    color: var(--main-on-surface, #414141);
+    font-family: "Rubik";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+}
+.vacancies .vacancies__box {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 40px;
+}
+@media (max-width: 650px) {
+  .vacancies .vacancies__box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.vacancies .vacancies__box .vacancies__box__card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 4px;
+  background: var(--main-surface, #fff);
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.vacancies .vacancies__box .vacancies__box__card h3 {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+@media (max-width: 850px) {
+  .vacancies .vacancies__box .vacancies__box__card h3 {
+    color: var(--main-on-surface, #414141);
+    font-family: "Rubik";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+}
+.vacancies .vacancies__box .vacancies__box__card h5 {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+@media (max-width: 850px) {
+  .vacancies .vacancies__box .vacancies__box__card h5 {
+    font-size: 16px;
+  }
+}
+.vacancies .vacancies__box .vacancies__box__card p {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+@media (max-width: 850px) {
+  .vacancies .vacancies__box .vacancies__box__card p {
+    font-size: 12px;
+  }
+}
+.vacancies .vacancies__box .vacancies__box__card .vacancies__tel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.vacancies .vacancies__box .vacancies__box__card .vacancies__tel a {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  text-decoration-line: underline;
 }
