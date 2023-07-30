@@ -1,0 +1,76 @@
+
+@use "./function" as func;
+@use "./variables" as var;
+
+@mixin container($padding: 116) {
+  $mb-padding: 20;
+  max-width: func.container(1440, $padding, $mb-padding);
+  padding-left: $mb-padding + px;
+  padding-right: $mb-padding + px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin btn-premary {
+  padding: 8px;
+  color: var(--main-secondary, #70c05b);
+  text-align: center;
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  border-radius: 4px;
+  border: 1px solid var(--main-secondary, #70c05b);
+  transition: .3s;
+  &:hover {
+    color: #fff;
+    background: var(--main-primary, #f63);
+  }
+}
+
+@mixin btn-secondary {
+  color: var(--grayscale-hardest, #606060);
+  text-align: center;
+  font-family: "Rubik";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+  border-radius: 4px;
+  background: var(--grayscale-lightest, #f3f2f1);
+  transition: .3s;
+  &:hover {
+    color: #fff;
+    background: var(--main-secondary, #70c05b);
+  }
+}
+
+@mixin h3-title ($font-size) {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+@mixin h5-title-24 ($font-size) {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
+}
+
+@mixin p-text ($font-size) {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 27px */
+}
+
+
