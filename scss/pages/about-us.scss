@@ -1,1 +1,127 @@
-@use "../global"
+@use "../global";
+@use "../utils/mixins" as mxn;
+
+.kompany {
+  margin-top: 80px;
+  padding-top: 27px;
+  background: var(--main-bg-page, #fbf8ec);
+  .kompany__links {
+    display: flex;
+    align-items: center;
+    a {
+      color: var(--main-on-surface, #414141);
+      font-family: "Rubik";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      &:last-child {
+        color: var(--grayscale-hard, #8f8f8f);
+      }
+    }
+  }
+  .company__wrapper {
+    display: flex;
+    justify-content: space-between;
+     @media (max-width: 900px)
+      {
+        flex-direction: column;
+      }
+    .company__wrapper__aside {
+      h3 {
+        padding-bottom: 16px;
+        @include mxn.h3-title(64px);
+         @media (max-width: 900px)
+      {
+        @include mxn.h3-title(35px);
+        
+      }
+      }
+      p {
+        color: var(--main-primary, #f63);
+        font-family: "Rubik";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        @media (max-width: 450px) {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .company__wrapper__bside {
+      background: url("../../images/about us/img-fon.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .company__box {
+    margin-top: 120px;
+    display: flex;
+    gap: 75px;
+     @media (max-width: 900px)
+      {
+        flex-direction: column;
+      }
+    .company__center {
+      // width: 100%;
+      display: flex;
+      gap: 10px;
+      h5 {
+        color: var(--main-on-surface, #414141);
+        font-family: "Rubik";
+        font-size: 20px;
+        line-height: 150%; /* 30px */
+      }
+      h4 {
+        margin-top: 16px;
+        color: var(--main-on-surface, #414141);
+        font-family: "Rubik";
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 150%; /* 36px */
+      }
+    }
+  }
+  .company__end {
+    margin-top: 120px;
+    padding-bottom: 80px;
+     @media (max-width: 900px)
+      {
+        flex-direction: column;
+      }
+    .company__end__box {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+       @media (max-width: 900px)
+      {
+        flex-direction: column;
+      }
+      .company__end__box__aside {
+      }
+      .company__end__box__bside {
+        width: 75%;
+        padding: 30px 0 30px 40px;
+        border-radius: 16px;
+        background: var(--main-secondary-muted, #e5ffde);
+        h5 {
+          color: var(--main-secondary, #70c05b);
+          font-family: "Rubik";
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 150%;
+          @media (max-width: 450px) {
+          font-size: 16px;
+          padding: 8px
+          ;
+        }
+        }
+      }
+    }
+  }
+}

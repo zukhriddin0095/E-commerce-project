@@ -1,1 +1,149 @@
-@use "../global"
+@use "../global";
+@use "../utils/mixins" as mxn;
+
+
+
+.product {
+  padding-bottom: 72px;
+   .stock__wrapper__texts {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 100px;
+      margin-bottom: 40px;
+      h3 {
+        @include mxn.h3-title(36px);
+        @media (max-width: 450px) {
+          @include mxn.h3-title(24px);
+        }
+      }
+      a {
+        color: var(--grayscale-hardest, #606060);
+        text-align: center;
+        font-family: "Rubik";
+        font-size: 16px;
+        line-height: 150%; /* 24px */
+        &::after {
+          padding-left: 10px;
+          content: "▼";
+        }
+        @media (max-width: 450px) {
+          font-size: 16px;
+        }
+      }
+    }
+    .stock__boxes {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      @media (min-width: 768px) {
+        gap: 40px;
+      }
+
+      @media (max-width: 450px) {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 16px;
+      }
+      .stock__card {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover {
+          border-radius: 4px;
+          background: var(--main-surface, #fff);
+          box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
+          .stock__img {
+            transform: rotate(2deg) scale(1.1);
+          }
+        }
+        &:first-child {
+          @media (max-width: 950px) {
+            display: none;
+          }
+          @media (max-width: 450px) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+          }
+        }
+        &:hover {
+          transform: scaleX(1);
+        }
+        .stock__img {
+          width: 100%;
+          transition: 0.3s;
+        }
+        .stock__card__intro {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          padding: 8px;
+          img {
+            transition: 0.3s;
+          }
+          .stock__card__price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .stock__card__price__title {
+              h5 {
+                @include mxn.h5-title-24(18px);
+                @media (max-width: 450px) {
+                  @include mxn.h5-title-24(14px);
+                }
+              }
+              h6 {
+                color: var(--grayscale-hardest, #606060);
+                font-family: "Rubik";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                @media (max-width: 450px) {
+                  @include mxn.h5-title-24(12px);
+                }
+              }
+              p {
+                color: var(--grayscale-light, #bfbfbf);
+                font-family: "Rubik";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%; /* 18px */
+                @media (max-width: 450px) {
+                  font-size: 8px;
+                }
+              }
+            }
+          }
+          h5 {
+            color: var(--main-on-surface, #414141);
+            font-family: "Rubik";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 24px */
+            @media (max-width: 450px) {
+              font-size: 12px;
+            }
+          }
+          .star {
+            width: 100%;
+          }
+          a {
+            @include mxn.btn-premary;
+            @media (max-width: 450px) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+}

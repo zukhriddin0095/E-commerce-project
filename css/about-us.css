@@ -468,3 +468,140 @@ input:focus {
   font-size: 8px;
   line-height: 150%; /* 12px */
 }
+
+.kompany {
+  margin-top: 80px;
+  padding-top: 27px;
+  background: var(--main-bg-page, #fbf8ec);
+}
+.kompany .kompany__links {
+  display: flex;
+  align-items: center;
+}
+.kompany .kompany__links a {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.kompany .kompany__links a:last-child {
+  color: var(--grayscale-hard, #8f8f8f);
+}
+.kompany .company__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 900px) {
+  .kompany .company__wrapper {
+    flex-direction: column;
+  }
+}
+.kompany .company__wrapper .company__wrapper__aside h3 {
+  padding-bottom: 16px;
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+@media (max-width: 900px) {
+  .kompany .company__wrapper .company__wrapper__aside h3 {
+    color: var(--main-on-surface, #414141);
+    font-family: "Rubik";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+}
+.kompany .company__wrapper .company__wrapper__aside p {
+  color: var(--main-primary, #f63);
+  font-family: "Rubik";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+@media (max-width: 450px) {
+  .kompany .company__wrapper .company__wrapper__aside p {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+.kompany .company__wrapper .company__wrapper__bside {
+  background: url("../../images/about us/img-fon.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.kompany .company__wrapper .company__wrapper__bside img {
+  width: 100%;
+}
+.kompany .company__box {
+  margin-top: 120px;
+  display: flex;
+  gap: 75px;
+}
+@media (max-width: 900px) {
+  .kompany .company__box {
+    flex-direction: column;
+  }
+}
+.kompany .company__box .company__center {
+  display: flex;
+  gap: 10px;
+}
+.kompany .company__box .company__center h5 {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 20px;
+  line-height: 150%; /* 30px */
+}
+.kompany .company__box .company__center h4 {
+  margin-top: 16px;
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
+}
+.kompany .company__end {
+  margin-top: 120px;
+  padding-bottom: 80px;
+}
+@media (max-width: 900px) {
+  .kompany .company__end {
+    flex-direction: column;
+  }
+}
+.kompany .company__end .company__end__box {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+@media (max-width: 900px) {
+  .kompany .company__end .company__end__box {
+    flex-direction: column;
+  }
+}
+.kompany .company__end .company__end__box .company__end__box__bside {
+  width: 75%;
+  padding: 30px 0 30px 40px;
+  border-radius: 16px;
+  background: var(--main-secondary-muted, #e5ffde);
+}
+.kompany .company__end .company__end__box .company__end__box__bside h5 {
+  color: var(--main-secondary, #70c05b);
+  font-family: "Rubik";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+}
+@media (max-width: 450px) {
+  .kompany .company__end .company__end__box .company__end__box__bside h5 {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
