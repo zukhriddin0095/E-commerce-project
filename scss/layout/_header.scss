@@ -17,10 +17,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
   .header__logo {
     display: flex;
     align-items: center;
+    margin-right: 24px;
     gap: 10px;
     .header__logo__2 {
       display: none;
