@@ -1,4 +1,9 @@
-const tabBtn = document.querySelectorAll("button");
+
+
+
+///// Ab tap
+
+const tabBtn = document.querySelectorAll(".tabs button");
 const tabContents = document.querySelectorAll(".tab-content");
 let active = 0;
 
@@ -22,3 +27,25 @@ tabBtn.forEach((el, i) => {
     getTabsContents();
   });
 });
+
+
+//////// toggle
+
+const kategoryMenu = document.querySelector("header #navbar-open");
+
+const kategaoryMenuToggle = document.querySelector("header .navbar-responsive");
+
+kategoryMenu.addEventListener("click", () => {
+  kategaoryMenuToggle.classList.toggle("hidden");
+});
+
+
+const footerFixed = document.querySelector(".footer__fixed");
+console.log(footerFixed);
+
+
+footerFixed.addEventListener("click", () => {
+  kategaoryMenuToggle.classList.toggle("hidden");
+  
+});
+  
