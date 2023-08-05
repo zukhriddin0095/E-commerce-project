@@ -940,36 +940,36 @@ input:focus {
     line-height: 150%;
   }
 }
-.location .location__wrapper .location__btns {
-  margin-top: 32px;
-  margin-bottom: 8px;
+.location .location__wrapper .tabs .tab__btn {
+  margin-top: 40px;
+  margin-bottom: 24px;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 24px;
 }
-.location .location__wrapper .location__btns a {
+.location .location__wrapper .tabs .tab__btn button {
   padding: 8px;
+  border-radius: 4px;
+  background: var(--grayscale-lightest, #f3f2f1);
   color: var(--grayscale-hardest, #606060);
+  border: none;
   text-align: center;
   font-family: "Rubik";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 18px */
+}
+.location .location__wrapper .tabs .tab__btn .active-tab {
   border-radius: 4px;
-  background: var(--grayscale-lightest, #f3f2f1);
-  transition: 0.3s;
-}
-.location .location__wrapper .location__btns a:hover {
-  color: #fff;
   background: var(--main-secondary, #70c05b);
+  color: #fff;
 }
-.location .location__wrapper .location__this {
+.location .location__wrapper .tabs .tab-contents {
   width: 100%;
 }
-.location .location__wrapper .location__this iframe {
+.location .location__wrapper .tabs .tab-contents .tab-content iframe {
   width: 100%;
-  border-radius: 10px;
 }
 
 .articles {

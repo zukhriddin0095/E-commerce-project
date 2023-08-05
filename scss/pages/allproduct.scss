@@ -1,0 +1,92 @@
+@use "../global";
+@use "../utils/mixins" as mxn;
+
+.productsAll {
+  margin-top: 80px;
+  padding-top: 27px;
+  padding-bottom: 80px;
+  background: var(--main-bg-page, #fbf8ec);
+  .product__title {
+    padding: 45px 0;
+    h3 {
+      color: var(--main-on-surface, #414141);
+      font-family: 'Rubik';
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 150%; /* 54px */
+    }
+  }
+  .products-row {
+    display: grid;
+    grid-template-columns: repeat(4, 9fr);
+    gap: 40px;
+    @media (max-width: 850px) {
+      grid-template-columns: repeat(3, 11fr);
+    }
+    @media (max-width: 450px) {
+      display: flex;
+      flex-direction: column;
+    }
+    .products__card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 4px;
+      background: var(--main-surface, #fff);
+      box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        border-radius: 4px;
+        background: var(--main-surface, #fff);
+        box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
+      }
+      .product__card__body {
+        img {
+          border-radius: 4px;
+          width: 100% !important;
+        }
+      }
+
+      .products__Card__Footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 8px;
+        h3 {
+          color: var(--main-on-surface, #414141);
+          font-family: "Rubik";
+          font-size: 16px;
+          font-style: normal;
+          line-height: 150%; /* 24px */
+        }
+        p {
+          color: var(--main-on-surface, #414141);
+          font-family: "Rubik";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 150%; /* 27px */
+        }
+        button {
+          padding: 8px;
+          width: 100%;
+          background: transparent;
+          border-radius: 4px;
+          border: 1px solid var(--main-secondary, #70c05b);
+          color: var(--main-secondary, #70c05b);
+          text-align: center;
+          font-family: "Rubik";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 24px */
+          transition: 0.3s;
+          &:active {
+            background: var(--main-primary, #f63);
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
