@@ -20,7 +20,7 @@
 </head>
 <body>
 
-    <header class="header">
+   <header class="header">
       <div class="container">
         <nav class="header__navbar">
           <div class="header__logo">
@@ -36,10 +36,12 @@
             </a>
           </div>
           <div class="header__search">
-            <a href="./kategory.html">
-              <img src="./images/home/menu.svg" alt="menu" />
-              <p>Каталог</p>
-            </a>
+            <div class="header__search__btn">
+              <button id="navbar-open" class="header__toogle" href="">
+                <img src="./images/home/menu.svg" alt="menu" />
+              </button>
+              <a href="./kategory.html">Каталог</a>
+            </div>
             <input type="text" placeholder="Найти товар" />
             <img class="search" src="./images/home/search.svg" alt="" />
           </div>
@@ -51,7 +53,7 @@
               </div>
               <div class="header__nav__Content">
                 <img src="./images/home/header-2.svg" alt="" />
-                <a href="./favorites.html">продукты</a>
+                <a href="./product.html">продукты</a>
               </div>
               <div class="header__nav__Content">
                 <img src="./images/home/header-3.svg" alt="" />
@@ -69,7 +71,28 @@
             </div>
           </div>
         </nav>
+        
       </div>
+        <div class="navbar-responsive">
+          <div class="container">
+             <ul>
+            <li><a href="">Молоко, сыр, яйцо</a></li>
+            <li><a href="">Хлеб</a></li>
+            <li><a href="">Фрукты и овощи</a></li>
+            <li><a href="">Замороженные продукты</a></li>
+            <li><a href="">Напитки</a></li>
+            <li><a href="">Кондитерские изделия</a></li>
+            <li><a href="">Чай, кофе</a></li>
+            <li><a href="">Бакалея</a></li>
+            <li><a href="">Здоровое питание</a></li>
+            <li><a href="">Зоотовары</a></li>
+            <li><a href="">Непродовольственные товары</a></li>
+            <li><a href="">Детское питание</a></li>
+            <li><a href="">Мясо, птица, колбаса</a></li>
+          </ul>
+          </div>
+         
+        </div>
     </header>
 
 
@@ -78,7 +101,7 @@
       <section class="footer__mobile">
         <div class="container">
           <div class="footer__nav__link">
-            <div class="header__nav__Content">
+            <div class="footer__fixed header__nav__Content">
               <img src="./images/home/meniendavatar.svg" alt="menu" />
               <a href="./kategory.html">Каталог</a>
             </div>

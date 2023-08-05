@@ -3,20 +3,6 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", this.window.scrollY > 0);
 });
 
-// toggle
-
-// function openNavbar() {
-//   document.getElementById("navbar-responsive").style.left = "0";
-//   // document.getElementById("navbar-responsive").style.top = "0";
-// }
-// function closeNavbar() {
-//   document.getElementById("navbar-responsive").style.left = "-100%";
-//   // document.getElementById("navbar-responsive").style.top = "-100%";
-// }
-
-// document.getElementById("navbar-open").addEventListener("click", openNavbar);
-// document.getElementById("navbar-close").addEventListener("click", closeNavbar);
-
 // /////// aos
 
 AOS.init();
@@ -33,3 +19,23 @@ function scrollToTop() {
     behavior: "smooth",
   });
 }
+
+//////// toggle
+
+const kategoryMenu = document.querySelector("header #navbar-open");
+
+const kategaoryMenuToggle = document.querySelector("header .navbar-responsive");
+
+kategoryMenu.addEventListener("click", () => {
+  kategaoryMenuToggle.classList.toggle("hidden");
+});
+
+
+const footerFixed = document.querySelector(".footer__fixed");
+console.log(footerFixed);
+
+
+footerFixed.addEventListener("click", () => {
+  kategaoryMenuToggle.classList.toggle("hidden");
+  
+});
