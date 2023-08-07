@@ -21,3 +21,8 @@ const footerFixed = document.querySelector(".footer__fixed");
 footerFixed.addEventListener("click", () => {
   kategaoryMenuToggle.classList.toggle("hidden");
 });
+
+
+categories.map((category) => {
+  kategaoryMenuToggle.innerHTML += `<a href="../categories1440.html?category=${category.name}">${category.name}</a>`; 
+})

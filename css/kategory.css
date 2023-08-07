@@ -229,42 +229,48 @@ input:focus {
   display: block;
   background-color: rgb(255, 255, 255);
   transition: 0.5s;
-}
-.hidden ul {
-  padding: 40px 0;
+  padding: 40px 70px;
   display: grid;
   grid-template-columns: repeat(4, 3fr);
   row-gap: 24px;
+  border-radius: 15px;
 }
 @media (max-width: 900px) {
-  .hidden ul {
+  .hidden {
+    grid-template-columns: repeat(3, 4fr);
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+  }
+}
+@media (max-width: 900px) {
+  .hidden {
     grid-template-columns: repeat(3, 4fr);
     -moz-column-gap: 25px;
          column-gap: 25px;
   }
 }
 @media (max-width: 600px) {
-  .hidden ul {
+  .hidden {
     grid-template-columns: repeat(2, 6fr);
     -moz-column-gap: 25px;
          column-gap: 25px;
   }
 }
-.hidden ul li a {
+.hidden a {
   color: var(--main-on-surface, #414141);
   font-family: "Rubik";
   font-size: 18px;
   font-weight: 700;
   line-height: 150%;
 }
-.hidden ul li a:hover {
+.hidden a:hover {
   color: #026a8d;
 }
-.hidden ul li a:active {
+.hidden a:active {
   color: var(--main-primary, #f63);
 }
 @media (max-width: 500px) {
-  .hidden ul li a {
+  .hidden a {
     font-size: 14px;
   }
 }
@@ -560,40 +566,22 @@ input:focus {
   font-weight: 700;
   line-height: 150%;
 }
+.katalog .katalog__wrapper .katalog__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
 .katalog .katalog__wrapper .katalog__row .katalog__card {
-  position: relative;
-  cursor: pointer;
-  transition: 0.05s;
-  overflow: hidden;
-}
-.katalog .katalog__wrapper .katalog__row .katalog__card::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  transition: 0.5s;
-  transform: translateY(-250px);
-  width: 97%;
-  height: 75%;
-  background: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70c05b 82.81%);
-  border-radius: 4px;
-}
-.katalog .katalog__wrapper .katalog__row .katalog__card:hover::before {
-  transform: translateX(0);
+  background: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70C05B 82.81%);
 }
 .katalog .katalog__wrapper .katalog__row img {
   width: 100%;
-  border-radius: 4px;
 }
-.katalog .katalog__wrapper .katalog__row .title__img {
-  padding: 0 10px;
-  position: absolute;
-  bottom: 0;
-  transition: 0.5s;
-}
-.katalog .katalog__wrapper .katalog__row .title__img h5 {
+.katalog .katalog__wrapper .katalog__row .katalog__title h5 a {
   color: var(--main-on-secondary, #fff);
   font-family: "Rubik";
   font-size: 18px;
+  font-style: normal;
   font-weight: 700;
   line-height: 150%;
 }

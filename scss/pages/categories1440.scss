@@ -1,0 +1,84 @@
+@use "../global";
+@use "../utils/mixins" as mxn;
+
+.catalog {
+  margin-top: 80px;
+  padding-top: 24px;
+  .katalog__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    .Toogle__menu {
+      margin-bottom: 80px;
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      gap: 40px;
+      .products__card {
+        border-radius: 4px;
+        background: var(--main-surface, #fff);
+        box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          border-radius: 4px;
+          background: var(--main-surface, #fff);
+          box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
+        }
+        @media (max-width: 850px) {
+          width: 100%;
+        }
+        @media (max-width: 500px) {
+          width: 100%;
+        }
+        .product__card__body {
+          img {
+            border-radius: 4px;
+            width: 100% !important;
+          }
+        }
+
+        .products__Card__Footer {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding: 8px;
+          a {
+            color: var(--main-on-surface, #414141);
+            font-family: "Rubik";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+          }
+          p {
+            color: var(--main-on-surface, #414141);
+            font-family: "Rubik";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%; /* 27px */
+          }
+          button {
+            padding: 8px;
+            width: 100%;
+            background: transparent;
+            border-radius: 4px;
+            border: 1px solid var(--main-secondary, #70c05b);
+            color: var(--main-secondary, #70c05b);
+            text-align: center;
+            font-family: "Rubik";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 24px */
+            transition: 0.3s;
+            &:active {
+              background: var(--main-primary, #f63);
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
