@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .product-card-body img {
+        width: 100%;
+      }
+      .products-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .hidden {
+        display: none;
+      }
+      .categories-menu {
+        padding: 20px;
+        position: absolute;
+        width: 100%;
+        background-color: red;
+      }
+      .categories-menu a {
+        color: white;
+        margin-right: 20px;
+      }
+      .search-input {
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html">E-commerce</a>
+        <a href="products.html">Products</a>
+
+        <button>Show</button>
+      </div>
+      <div class="categories-menu hidden">
+        <div class="container"></div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <div class="products-header">
+            <h1>All products: <span class="total-products"></span></h1>
+          </div>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search products..."
+          />
+          <div class="products-row"></div>
+        </div>
+      </section>
+    </main>
+    <script src="js/products-data.js"></script>
+    <script src="js/categories-data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+  </body>
+</html>

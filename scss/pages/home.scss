@@ -74,115 +74,252 @@
         }
       }
     }
-    .stock__boxes {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      @media (min-width: 768px) {
-        gap: 40px;
+    .discount-products-row {
+      display: grid;
+      grid-template-columns: repeat(4, 4fr);
+      gap: 40px;
+      @media (max-width: 1150px) {
+        flex-wrap: wrap;
+        gap: 25px;
       }
-
-      @media (max-width: 450px) {
+      @media (max-width: 850px) {
         display: grid;
         grid-template-columns: repeat(2, 2fr);
-        gap: 16px;
       }
-      .stock__card {
-        width: 100%;
-        height: 100%;
-        background: #fff;
+      @media (max-width: 450px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .products__card {
         border-radius: 4px;
+        background: var(--main-surface, #fff);
         box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
-        transition: 0.3s;
-        overflow: hidden;
         cursor: pointer;
+        transition: 0.3s;
         &:hover {
           border-radius: 4px;
           background: var(--main-surface, #fff);
           box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
-          .stock__img {
-            transform: rotate(2deg) scale(1.1);
-          }
         }
-        &:first-child {
-          @media (max-width: 950px) {
-            display: none;
-          }
-          @media (max-width: 450px) {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          }
-        }
-        &:hover {
-          transform: scaleX(1);
-        }
-        .stock__img {
+        @media (max-width: 850px) {
           width: 100%;
-          transition: 0.3s;
         }
-        .stock__card__intro {
+        @media (max-width: 500px) {
+          width: 100%;
+        }
+        .product__card__body {
+          img {
+            border-radius: 4px;
+            width: 100% !important;
+          }
+        }
+
+        .products__Card__Footer {
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 20px;
           padding: 8px;
-          img {
-            transition: 0.3s;
-          }
-          .stock__card__price {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            .stock__card__price__title {
-              h5 {
-                @include mxn.h5-title-24(18px);
-                @media (max-width: 450px) {
-                  @include mxn.h5-title-24(14px);
-                }
-              }
-              h6 {
-                color: var(--grayscale-hardest, #606060);
-                font-family: "Rubik";
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 150%;
-                @media (max-width: 450px) {
-                  @include mxn.h5-title-24(12px);
-                }
-              }
-              p {
-                color: var(--grayscale-light, #bfbfbf);
-                font-family: "Rubik";
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 150%; /* 18px */
-                @media (max-width: 450px) {
-                  font-size: 8px;
-                }
-              }
-            }
-          }
-          h5 {
+          a {
             color: var(--main-on-surface, #414141);
+            font-family: "Rubik";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+          }
+          p {
+            color: var(--main-on-surface, #414141);
+            font-family: "Rubik";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%; /* 27px */
+          }
+          button {
+            padding: 8px;
+            width: 100%;
+            background: transparent;
+            border-radius: 4px;
+            border: 1px solid var(--main-secondary, #70c05b);
+            color: var(--main-secondary, #70c05b);
+            text-align: center;
             font-family: "Rubik";
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
             line-height: 150%; /* 24px */
-            @media (max-width: 450px) {
-              font-size: 12px;
+            transition: 0.3s;
+            &:active {
+              background: var(--main-primary, #f63);
+              color: #fff;
             }
           }
-          .star {
-            width: 100%;
+        }
+      }
+    }
+    .new-products-row {
+      display: grid;
+      grid-template-columns: repeat(4, 4fr);
+      gap: 40px;
+
+      @media (max-width: 1150px) {
+        flex-wrap: wrap;
+        gap: 25px;
+      }
+      @media (max-width: 850px) {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+      }
+      @media (max-width: 450px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .products__card {
+        border-radius: 4px;
+        background: var(--main-surface, #fff);
+        box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          border-radius: 4px;
+          background: var(--main-surface, #fff);
+          box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
+        }
+        @media (max-width: 850px) {
+          width: 100%;
+        }
+        @media (max-width: 500px) {
+          width: 100%;
+        }
+        .product__card__body {
+          img {
+            border-radius: 4px;
+            width: 100% !important;
           }
+        }
+
+        .products__Card__Footer {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding: 8px;
           a {
-            @include mxn.btn-premary;
-            @media (max-width: 450px) {
-              font-size: 16px;
+            color: var(--main-on-surface, #414141);
+            font-family: "Rubik";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+          }
+          p {
+            color: var(--main-on-surface, #414141);
+            font-family: "Rubik";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%; /* 27px */
+          }
+          button {
+            padding: 8px;
+            width: 100%;
+            background: transparent;
+            border-radius: 4px;
+            border: 1px solid var(--main-secondary, #70c05b);
+            color: var(--main-secondary, #70c05b);
+            text-align: center;
+            font-family: "Rubik";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 24px */
+            transition: 0.3s;
+            &:active {
+              background: var(--main-primary, #f63);
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .popular-products-row {
+      display: grid;
+      grid-template-columns: repeat(4, 4fr);
+      gap: 40px;
+
+      @media (max-width: 1150px) {
+        flex-wrap: wrap;
+        gap: 25px;
+      }
+      @media (max-width: 850px) {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+      }
+      @media (max-width: 450px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .products__card {
+        border-radius: 4px;
+        background: var(--main-surface, #fff);
+        box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          border-radius: 4px;
+          background: var(--main-surface, #fff);
+          box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
+        }
+        @media (max-width: 850px) {
+          width: 100%;
+        }
+        @media (max-width: 500px) {
+          width: 100%;
+        }
+        .product__card__body {
+          img {
+            border-radius: 4px;
+            width: 100% !important;
+          }
+        }
+
+        .products__Card__Footer {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding: 8px;
+          a {
+            color: var(--main-on-surface, #414141);
+            font-family: "Rubik";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+          }
+          p {
+            color: var(--main-on-surface, #414141);
+            font-family: "Rubik";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%; /* 27px */
+          }
+          button {
+            padding: 8px;
+            width: 100%;
+            background: transparent;
+            border-radius: 4px;
+            border: 1px solid var(--main-secondary, #70c05b);
+            color: var(--main-secondary, #70c05b);
+            text-align: center;
+            font-family: "Rubik";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 24px */
+            transition: 0.3s;
+            &:active {
+              background: var(--main-primary, #f63);
+              color: #fff;
             }
           }
         }
@@ -215,6 +352,10 @@
         background: var(--main-primary-muted, #fcd5ba);
         box-shadow: 0px 8px 16px 0px rgba(202, 147, 96, 0.5);
         cursor: pointer;
+        &:last-child {
+          border-radius: 4px;
+          background: var(--main-secondary-muted, #e5ffde);
+        }
         // &:hover {
 
         // }
@@ -252,46 +393,46 @@
           }
         }
       }
-      .Special_offers__bside {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 200px;
-        border-radius: 4px;
-        background: var(--main-secondary-muted, #e5ffde);
-        box-shadow: 0px 8px 16px 0px rgba(54, 54, 54, 0.5);
-        cursor: pointer;
-        .Special__bside__texts {
-          padding-left: 40px;
-          h3 {
-            max-width: 258px;
-            margin-bottom: 6px;
-            padding-bottom: 0;
-            @include mxn.h3-title(24px);
-            @media (max-width: 800px) {
-              @include mxn.h3-title(16px);
-            }
-          }
-          p {
-            max-width: 258px;
-            color: var(--main-on-surface, #414141);
-            font-family: "Rubik";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 150%; /* 24px */
-            @media (max-width: 800px) {
-              font-size: 12px;
-            }
-          }
-        }
-        .Special__bside__img {
-          img {
-            padding: 8px 31px 8px 0;
-            width: 100%;
-          }
-        }
-      }
+      // .Special_offers__bside {
+      //   display: flex;
+      //   align-items: center;
+      //   width: 100%;
+      //   height: 200px;
+      //   border-radius: 4px;
+      //   background: var(--main-secondary-muted, #e5ffde);
+      //   box-shadow: 0px 8px 16px 0px rgba(54, 54, 54, 0.5);
+      //   cursor: pointer;
+      //   .Special__bside__texts {
+      //     padding-left: 40px;
+      //     h3 {
+      //       max-width: 258px;
+      //       margin-bottom: 6px;
+      //       padding-bottom: 0;
+      //       @include mxn.h3-title(24px);
+      //       @media (max-width: 800px) {
+      //         @include mxn.h3-title(16px);
+      //       }
+      //     }
+      //     p {
+      //       max-width: 258px;
+      //       color: var(--main-on-surface, #414141);
+      //       font-family: "Rubik";
+      //       font-size: 16px;
+      //       font-style: normal;
+      //       font-weight: 400;
+      //       line-height: 150%; /* 24px */
+      //       @media (max-width: 800px) {
+      //         font-size: 12px;
+      //       }
+      //     }
+      //   }
+      //   .Special__bside__img {
+      //     img {
+      //       padding: 8px 31px 8px 0;
+      //       width: 100%;
+      //     }
+      //   }
+      // }
     }
   }
 }
@@ -441,6 +582,19 @@
             font-family: "Rubik";
             font-size: 16px;
             line-height: 150%;
+            &:first-child {
+              background: transparent;
+              color: var(--main-on-surface, #414141);
+              font-family: 'Rubik';
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 150%;
+              &:hover {
+                background: transparent;
+                color: #08210a;
+              }
+            }
             &:hover {
               background: #70c05b;
               color: #fff;
