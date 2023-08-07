@@ -542,13 +542,23 @@ input:focus {
 .catalog .katalog__container {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 140px;
+}
+@media (max-width: 780px) {
+  .catalog .katalog__container {
+    flex-direction: column;
+  }
 }
 .catalog .katalog__container .Toogle__menu {
   margin-bottom: 80px;
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   gap: 40px;
+}
+@media (max-width: 450px) {
+  .catalog .katalog__container .Toogle__menu {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .catalog .katalog__container .Toogle__menu .products__card {
   border-radius: 4px;

@@ -5,7 +5,7 @@ function getKatalogCard(categories) {
   katalogCard.className = "katalog__card";
 
   const katalogImg = document.createElement("img");
-  katalogImg.alt = categories.image;
+  katalogImg.src = categories.image;
 
   const katalogTitle = document.createElement("div");
   katalogTitle.className = "katalog__title";
