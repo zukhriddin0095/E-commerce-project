@@ -80,6 +80,7 @@
   }
 
   .header__right {
+    margin-left: 10px;
     display: flex;
     background-color: white;
     .header__nav__link {
@@ -105,6 +106,8 @@
             inset 10px 10px 15px rgba(70, 70, 70, 0.12);
         }
         a {
+          display: flex;
+          // gap: 8px;  
           color: var(--main-on-surface, #414141);
           text-align: center;
           font-family: "Rubik";
