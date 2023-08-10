@@ -291,6 +291,17 @@ input:focus {
   font-size: 13px;
   font-weight: 710;
 }
+.header__nav__Content .favorites-total {
+  padding: 3px;
+  position: absolute;
+  top: 0;
+  right: 3px;
+  color: #fff;
+  background: #ba0707;
+  border-radius: 30%;
+  font-size: 13px;
+  font-weight: 710;
+}
 
 .footer {
   padding: 24px 0;
@@ -565,60 +576,45 @@ input:focus {
 .basket .basket-container .bascet__card {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 40px;
-}
-@media (max-width: 650px) {
-  .basket .basket-container .bascet__card {
-    flex-direction: column;
-    align-items: start;
-    border-bottom: 2px solid #888;
-  }
 }
 .basket .basket-container .bascet__card .basket__card__img img {
   border-radius: 15px 0 0 15px;
-  width: 100%;
-}
-@media (max-width: 650px) {
-  .basket .basket-container .bascet__card .basket__card__img img {
-    border-radius: 15px;
-    padding-left: 30px;
-  }
+  width: 80px;
+  height: 60px;
 }
 .basket .basket-container .bascet__card .basket__card__content {
-  padding: 50px;
-  border: 2px solid rgba(136, 136, 136, 0.5333333333);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #70c05b;
   background: #fffefe;
   border-radius: 15px;
   overflow: hidden;
 }
-@media (max-width: 650px) {
-  .basket .basket-container .bascet__card .basket__card__content {
-    border: none;
-  }
-}
-.basket .basket-container .bascet__card .basket__card__content h3 {
-  color: var(--main-on-surface, #414141);
-  font-family: "Rubik";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 27px */
-}
-.basket .basket-container .bascet__card .basket__card__content p {
+.basket .basket-container .bascet__card .basket__card__content .basket__card__content__text {
   max-width: 300px;
-  padding-top: 10px;
+  margin-right: 10px;
+}
+.basket .basket-container .bascet__card .basket__card__content .basket__card__content__text h3 {
   color: var(--main-on-surface, #414141);
   font-family: "Rubik";
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 24px */
+  font-weight: 700;
 }
-.basket .basket-container .bascet__card .basket__card__content p:nth-child(3) {
+.basket .basket-container .bascet__card .basket__card__content .basket__card__content__text p {
+  padding-top: 3px;
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.basket .basket-container .bascet__card .basket__card__content p {
   color: var(--main-on-surface, #060606);
   font-family: "Rubik";
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
@@ -629,16 +625,18 @@ input:focus {
   border-radius: 15px;
 }
 .basket .basket-container .bascet__card .basket__card__content button {
-  margin-top: 10px;
   width: 30px;
-  border-radius: 15px;
+  border-radius: 4px;
   font-size: 25px;
-  background: transparent;
+  background: var(--main-secondary, #70c05b);
   outline: none;
-  border: 2px solid #888888;
-  color: #888;
+  border: 2px solid #ffffff;
+  color: #fffbfb;
 }
 .basket .basket-container .bascet__card .basket__card__content button:active {
   color: #060606;
   border-color: #060606;
+}
+.basket .basket-container .bascet__card .basket__card__content button:nth-child(3) {
+  margin-left: 10px;
 }

@@ -36,3 +36,16 @@ function getCardTotal() {
   totalCard.textContent = card.length;
 }
 getCardTotal();
+
+
+const FAVORITE = "favorite";
+
+let favoritesProductsJson = localStorage.getItem(FAVORITE);
+let favoritesProducts = JSON.parse(favoritesProductsJson) || [];
+
+const favoritesCard = document.querySelector(".favorites-total");
+
+function getFavoriteNumber() {
+  favoritesCard.textContent = favoritesProducts.length
+}
+getFavoriteNumber();

@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="./css/favorites.min.css">
    <link
       rel="stylesheet"
@@ -46,6 +45,8 @@
           <div class="header__right">
             <div class="header__nav__link">
               <div class="header__nav__Content">
+                <div class="favorites-total">
+                </div>
                 <a href="favorites.html"><img src="./images/home/header-1.svg" alt="" /></a>
                 <a href="./favorites.html">Избранное</a>
               </div>
@@ -93,6 +94,15 @@
       </div>
     </header>
 
+    <main>
+      <section class="favorite">
+        <div class="container">
+          <div class="favorite_wrapper">
+
+          </div>
+        </div>
+      </section>
+    </main>
 
 
     <footer>
@@ -207,7 +217,11 @@
       </section>
     </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/products-data.js"></script>
+    <script src="./js/categories-data.js"></script>
+    <script src="./js/product.js"></script>
   <script src="./js/main.js"></script>
+    <script src="./js/favorite.js"></script>
+
 </body>
 </html>

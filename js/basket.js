@@ -13,6 +13,9 @@ function getBasketRow(product) {
   const basketCardContent = document.createElement("div");
   basketCardContent.className = "basket__card__content";
 
+  const basketCardContentText = document.createElement("div")
+  basketCardContentText.className = "basket__card__content__text";
+
   const cardTitle = document.createElement("h3");
   cardTitle.textContent = product.name;
 
@@ -40,16 +43,17 @@ function getBasketRow(product) {
   bascetCard.append(basketCardImg, basketCardContent);
   basketCardImg.append(cardImg);
   basketCardContent.append(
-    cardTitle,
-    cardText,
+    basketCardContentText,
     cardPrice,
     basketBtnMinus,
     basketQuantity,
     basketBtnPlus
   );
+  basketCardContentText.append(cardTitle, cardText);
 
   return bascetCard;
 }
+  
 
 function getCartProducts() {
   basketRow.innerHTML = "";
