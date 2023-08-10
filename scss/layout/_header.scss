@@ -230,3 +230,19 @@
     }
   }
 }
+
+
+.header__nav__Content {
+  position: relative;
+  .card-total {
+    padding: 3px;
+    position: absolute;
+    top: 0;
+    right: 3px;
+    color: #fff;
+    background: #ba0707;
+    border-radius: 30%;
+    font-size: 13px;
+    font-weight: 710;
+  }
+}

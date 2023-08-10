@@ -6,7 +6,7 @@ const totalProducts = document.querySelector(".products-total");
 
 let search = "";
 
-function getProductCard(products) {
+function getProductCard({ id, images, name, description, price }) {
   const productsCard = document.createElement("div");
 
   productsCard.className = "products__card";
@@ -17,9 +17,9 @@ function getProductCard(products) {
 
   const productImg = document.createElement("img");
 
-  productImg.src = products.images[0];
+  productImg.src = images[0];
 
-  productImg.alt = products.name;
+  productImg.alt = name;
 
   const productsCardFooter = document.createElement("products__Card__Footer");
 
@@ -35,15 +35,18 @@ function getProductCard(products) {
 
   const productdesc = document.createElement("p");
 
-  productdesc.className = "product__descreption"
+  productdesc.className = "product__descreption";
 
-  productdesc.textContent = products.description;
+  productdesc.textContent = description;
 
-  productPrice.textContent = products.price + " ₽";
+  productPrice.textContent = price + " ₽";
 
   const productBtn = document.createElement("button");
 
   productBtn.innerHTML = "Add to the card";
+  productBtn.addEventListener("click", () => {
+    addToCard(id);
+  });
 
   productsCard.append(productcardbody, productsCardFooter);
 
@@ -52,7 +55,6 @@ function getProductCard(products) {
   productsCardFooter.prepend(productBtn);
 
   productsCardFooter.prepend(productdesc);
-
 
   productsCardFooter.prepend(productPrice);
 
@@ -64,23 +66,20 @@ function getProductCard(products) {
 }
 
 function getproducts() {
-  
   let result = products.filter((pr) => pr.name.toLowerCase().includes(search));
 
-  totalProducts.textContent = result.length
+  totalProducts.textContent = result.length;
 
-  productsRow.innerHTML = ""
+  productsRow.innerHTML = "";
 
-  if (result.length !== 0 ){
+  if (result.length !== 0) {
     result.map((pr) => {
       let card = getProductCard(pr);
       productsRow.append(card);
     });
-  }else {
-    productsRow.innerHTML = `<div class="no__products"> No Products: UNDIFINED </div>`
+  } else {
+    productsRow.innerHTML = `<div class="no__products"> No Products: UNDIFINED </div>`;
   }
-
-  
 }
 
 getproducts();
@@ -89,3 +88,25 @@ searchInut.addEventListener("keyup", function () {
   search = this.value.trim().toLowerCase();
   getproducts();
 });
+
+function addToCard(id) {
+  let product = products.find((pr) => pr.id === id);
+  let check = card.find((pr) => pr.id === id)
+
+    if (check) {
+
+      card = card.map((pr) => {
+        if (pr.id === id) {
+          pr.quantity++;
+        }
+        return pr;
+      });
+
+    }else {
+      product.quantity = 1
+      card.push(product);
+    }
+localStorage.setItem("card", JSON.stringify(card));
+    
+  getCardTotal();
+}

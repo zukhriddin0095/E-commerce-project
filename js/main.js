@@ -1,10 +1,9 @@
-// navbar shrink 
+// navbar shrink
 
 window.addEventListener("scroll", function () {
   var header = this.document.querySelector("header");
   header.classList.toggle("sticky", this.window.scrollY > 0);
 });
-
 
 //////// toggle
 
@@ -22,7 +21,18 @@ footerFixed.addEventListener("click", () => {
   kategaoryMenuToggle.classList.toggle("hidden");
 });
 
-
 categories.map((category) => {
-  kategaoryMenuToggle.innerHTML += `<a href="../categories1440.html?category=${category.name}">${category.name}</a>`; 
-})
+  kategaoryMenuToggle.innerHTML += `<a href="../categories1440.html?category=${category.name}">${category.name}</a>`;
+});
+
+/////// basket
+const totalCard = document.querySelector(".card-total");
+
+let cardJson = localStorage.getItem("card")
+
+let card = JSON.parse(cardJson) || [];
+
+function getCardTotal() {
+  totalCard.textContent = card.length;
+}
+getCardTotal();

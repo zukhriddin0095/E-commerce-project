@@ -277,6 +277,21 @@ input:focus {
   }
 }
 
+.header__nav__Content {
+  position: relative;
+}
+.header__nav__Content .card-total {
+  padding: 3px;
+  position: absolute;
+  top: 0;
+  right: 3px;
+  color: #fff;
+  background: #ba0707;
+  border-radius: 30%;
+  font-size: 13px;
+  font-weight: 710;
+}
+
 .footer {
   padding: 24px 0;
   background: url("../../images/home/footer-bg.png") no-repeat rgb(249, 244, 226);
@@ -535,4 +550,95 @@ input:focus {
   font-family: "Rubik";
   font-size: 8px;
   line-height: 150%; /* 12px */
+}
+
+.basket {
+  margin-top: 80px;
+  padding-top: 24px;
+  margin-bottom: 80px;
+}
+.basket .basket-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.basket .basket-container .bascet__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+@media (max-width: 650px) {
+  .basket .basket-container .bascet__card {
+    flex-direction: column;
+    align-items: start;
+    border-bottom: 2px solid #888;
+  }
+}
+.basket .basket-container .bascet__card .basket__card__img img {
+  border-radius: 15px 0 0 15px;
+  width: 100%;
+}
+@media (max-width: 650px) {
+  .basket .basket-container .bascet__card .basket__card__img img {
+    border-radius: 15px;
+    padding-left: 30px;
+  }
+}
+.basket .basket-container .bascet__card .basket__card__content {
+  padding: 50px;
+  border: 2px solid rgba(136, 136, 136, 0.5333333333);
+  background: #fffefe;
+  border-radius: 15px;
+  overflow: hidden;
+}
+@media (max-width: 650px) {
+  .basket .basket-container .bascet__card .basket__card__content {
+    border: none;
+  }
+}
+.basket .basket-container .bascet__card .basket__card__content h3 {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 27px */
+}
+.basket .basket-container .bascet__card .basket__card__content p {
+  max-width: 300px;
+  padding-top: 10px;
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.basket .basket-container .bascet__card .basket__card__content p:nth-child(3) {
+  color: var(--main-on-surface, #060606);
+  font-family: "Rubik";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.basket .basket-container .bascet__card .basket__card__content span {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 15px;
+}
+.basket .basket-container .bascet__card .basket__card__content button {
+  margin-top: 10px;
+  width: 30px;
+  border-radius: 15px;
+  font-size: 25px;
+  background: transparent;
+  outline: none;
+  border: 2px solid #888888;
+  color: #888;
+}
+.basket .basket-container .bascet__card .basket__card__content button:active {
+  color: #060606;
+  border-color: #060606;
 }

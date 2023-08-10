@@ -11,11 +11,13 @@ function getKatalogCard(categories) {
   katalogTitle.className = "katalog__title";
 
   const kategoryName = document.createElement("h5");
-  kategoryName.innerHTML = `<a href="../categories.html">${categories.name}</a>`;
+  kategoryName.innerHTML = `<a href="../categories1440.html">${categories.name}</a>`;
 
   katalogCard.append(katalogImg, katalogTitle);
 
   katalogTitle.appendChild(kategoryName);
+
+ 
   return katalogCard;
 }
 
@@ -25,5 +27,3 @@ categories.map((katalog) => {
   let card = getKatalogCard(katalog);
   katalogRow.append(card);
 });
-
-console.log(katalogRow);

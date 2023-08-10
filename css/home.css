@@ -277,6 +277,21 @@ input:focus {
   }
 }
 
+.header__nav__Content {
+  position: relative;
+}
+.header__nav__Content .card-total {
+  padding: 3px;
+  position: absolute;
+  top: 0;
+  right: 3px;
+  color: #fff;
+  background: #ba0707;
+  border-radius: 30%;
+  font-size: 13px;
+  font-weight: 710;
+}
+
 .footer {
   padding: 24px 0;
   background: url("../../images/home/footer-bg.png") no-repeat rgb(249, 244, 226);
@@ -652,6 +667,7 @@ input:focus {
   }
 }
 .kategory .stock__wrapper .discount-products-row .products__card {
+  position: relative;
   border-radius: 4px;
   background: var(--main-surface, #fff);
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);

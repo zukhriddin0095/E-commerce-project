@@ -5,8 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/favorites.min.css">
+  <link rel="stylesheet" href="./css/basket.min.css">
    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -54,6 +53,8 @@
                 <a href="./Allproduct.html">продукты</a>
               </div>
               <div class="header__nav__Content">
+                <div class="card-total">
+                </div>
                 <a href="./basket.html"><img src="./images/home/header-3.svg" alt="" /></a>
                 <a href="./basket.html">Корзина</a>
               </div>
@@ -91,7 +92,12 @@
       </div>
     </header>
 
-
+      <main>
+        <section class="basket">
+          <div class="basket-container container">
+          </div>
+        </section>
+      </main>
 
     <footer>
       <section class="footer__mobile">
@@ -110,6 +116,8 @@
               <a href="./allproduct.html">продукты</a>
             </div>
             <div class="header__nav__Content">
+              <div class="card-total">
+                </div>
              <a href="./basket.html"> <img src="./images/home/header-3.svg" alt="" /></a>
               <a href="./basket.html">Корзина</a>
             </div>
@@ -202,8 +210,8 @@
         </div>
       </section>
     </footer>
-
-  
+  <script src="./js/categories-data.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/basket.js"></script>
 </body>
 </html>

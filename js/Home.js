@@ -36,6 +36,7 @@ function getProductCard(products) {
   const productBtn = document.createElement("button");
 
   productBtn.innerHTML = "Add to the card";
+  productBtn.addEventListener('click', () => addToCard(products.id));
 
   productsCard.append(productcardbody, productsCardFooter);
 
@@ -47,15 +48,43 @@ function getProductCard(products) {
 
   productsCardFooter.prepend(productTitle);
 
+
   return productsCard;
+}
+
+function addToCard(id) {
+  let product = products.find((pr) => pr.id === id);
+  let check = card.find((pr) => pr.id === id)
+
+    if (check) {
+
+      card = card.map((pr) => {
+        if (pr.id === id) {
+          pr.quantity++;
+        }
+        return pr;
+      });
+
+    }else {
+      product.quantity = 1
+      card.push(product);
+    }
+localStorage.setItem("card", JSON.stringify(card));
+    
+  getCardTotal();
 }
 
 let discountProducts = products.filter((pr) => pr.discount).slice(-4);
 
 discountProducts.map((product) => {
   let card = getProductCard(product);
+  console.log(card);
   discountProductsRow.append(card);
 });
+
+
+
+
 
 let newProducts = products.slice(-4);
 
@@ -158,7 +187,6 @@ const stati = [
 ];
 
 const articlesWrapperBox = document.querySelector(".articles__wrapper__box");
-console.log(articlesWrapperBox);
 
 function getStatiCard(stati) {
   const articlesWrapperBoxCard = document.createElement("div");
@@ -171,7 +199,7 @@ function getStatiCard(stati) {
   articlesCardIntro.className = "articles__card__intro";
 
   const aCITittle = document.createElement("h5");
-  aCITittle.innerHTML = `<a href="../stati.html">${stati.title}</a>`;
+  aCITittle.innerHTML = `<a href="../statii.html">${stati.title}</a>`;
 
   const sAText = document.createElement("p");
   const sATittleText = document.createTextNode(stati.description);
@@ -182,10 +210,12 @@ function getStatiCard(stati) {
   const sALinkText = document.createTextNode("Подробнее");
   sALink.appendChild(sALinkText);
 
-  articlesWrapperBoxCard.append(aWBCardImg);
-  articlesWrapperBoxCard.append(articlesCardIntro);
+  articlesWrapperBoxCard.append(aWBCardImg, articlesCardIntro);
+  // articlesWrapperBoxCard.append(articlesCardIntro);
 
   articlesCardIntro.append(aCITittle, sAText, sALink);
+
+  
 
   return articlesWrapperBoxCard;
 }
@@ -221,3 +251,6 @@ tabBtn.forEach((el, i) => {
     getTabsContents();
   });
 });
+
+
+//////////

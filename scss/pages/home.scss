@@ -91,6 +91,7 @@
         grid-template-columns: repeat(1, 1fr);
       }
       .products__card {
+        position: relative;
         border-radius: 4px;
         background: var(--main-surface, #fff);
         box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
@@ -356,9 +357,6 @@
           border-radius: 4px;
           background: var(--main-secondary-muted, #e5ffde);
         }
-        // &:hover {
-
-        // }
         .Special__aside__texts {
           padding-left: 40px;
           h3 {
@@ -585,7 +583,7 @@
             &:first-child {
               background: transparent;
               color: var(--main-on-surface, #414141);
-              font-family: 'Rubik';
+              font-family: "Rubik";
               font-size: 18px;
               font-style: normal;
               font-weight: 700;
@@ -609,3 +607,6 @@
     }
   }
 }
+
+
+
