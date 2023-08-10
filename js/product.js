@@ -7,7 +7,7 @@ const totalProducts = document.querySelector(".products-total");
 let search = "";
 
 function getProductCard({ id, images, name, description, price }) {
-  // let checkFavorites = favoritesProducts.find((el) => el.id === id);
+  let checkFavorites = card.find((el) => el.id === id);
 
   const productsCard = document.createElement("div");
 
@@ -46,6 +46,7 @@ function getProductCard({ id, images, name, description, price }) {
   const productBtn = document.createElement("button");
 
   productBtn.innerHTML = "Add to the card";
+  productBtn.className = checkFavorites ? "active-card" : "";
 
   productBtn.addEventListener("click", () => {
     addToCard(id);

@@ -47,12 +47,15 @@
           width: 100% !important;
         }
       }
-
       .products__Card__Footer {
         display: flex;
         flex-direction: column;
         gap: 20px;
         padding: 8px;
+        .active-card {
+          background: #f63;
+          color: #fff;
+        }
         h3 {
           color: var(--main-on-surface, #414141);
           font-family: "Rubik";
@@ -72,6 +75,7 @@
           border-color: #000;
           font-size: 25px;
         }
+        
         .product__descreption {
           color: var(--main-on-surface, #414141);
           font-family: "Rubik";

@@ -620,6 +620,10 @@ input:focus {
   gap: 20px;
   padding: 8px;
 }
+.productsAll .products-row .products__card .products__Card__Footer .active-card {
+  background: #f63;
+  color: #fff;
+}
 .productsAll .products-row .products__card .products__Card__Footer h3 {
   color: var(--main-on-surface, #414141);
   font-family: "Rubik";
