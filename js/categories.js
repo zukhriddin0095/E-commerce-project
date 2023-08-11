@@ -1,9 +1,6 @@
 
 const category = new URLSearchParams(location.search).get("category");
 
-
-
-
 const CatalogMenu = document.querySelector(".Toogle__menu");
 
 function getProductCard(products) {

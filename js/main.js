@@ -28,7 +28,7 @@ categories.map((category) => {
 /////// basket
 const totalCard = document.querySelector(".card-total");
 
-let cardJson = localStorage.getItem("card")
+let cardJson = localStorage.getItem("card");
 
 let card = JSON.parse(cardJson) || [];
 
@@ -36,7 +36,6 @@ function getCardTotal() {
   totalCard.textContent = card.length;
 }
 getCardTotal();
-
 
 const FAVORITE = "favorite";
 
@@ -46,6 +45,34 @@ let favoritesProducts = JSON.parse(favoritesProductsJson) || [];
 const favoritesCard = document.querySelector(".favorites-total");
 
 function getFavoriteNumber() {
-  favoritesCard.textContent = favoritesProducts.length
+  favoritesCard.textContent = favoritesProducts.length;
 }
 getFavoriteNumber();
+
+/////// modal
+
+const modalBtn = document.querySelector(".modal-btn");
+const modalGO = document.querySelector(".modal");
+const closeBtn = document.querySelector(".modal-close-btn");
+const modalGoContent = document.querySelector(".modal-content");
+
+modalBtn.addEventListener("click", () => {
+  modalGO.classList.add("modal-active");
+  modalGoContent.classList.add("modal__gocontent");
+});
+
+closeBtn.addEventListener("click", () => {
+  modalGO.classList.remove("modal-active");
+  modalGoContent.classList.remove("modal__gocontent");
+
+});
+
+window.addEventListener("click", (e) => {
+ if (e.target == modalGO) {
+  modalGO.classList.remove("modal-active");
+  modalGoContent.classList.remove("modal__gocontent");
+ }
+})
+
+
+// console.log(modalBtn);

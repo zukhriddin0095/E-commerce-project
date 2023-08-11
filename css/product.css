@@ -174,37 +174,12 @@ input:focus {
     gap: 16px;
   }
 }
-.header__navbar .header__right .header__nav__profile a {
+.header__navbar .header__right .header__nav__profile .modal-btn {
   display: flex;
-  color: var(--on-surface, #232323);
-  font-family: "Rubik";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-}
-.header__navbar .header__right .header__nav__profile a::after {
-  content: "▼";
-  padding-left: 10px;
-}
-.header__navbar .header__right .header__nav__profile a:hover ~ ul {
-  display: block;
-}
-.header__navbar .header__right .header__nav__profile ul {
-  display: none;
-  padding: 10px;
-  border-radius: 10px;
-  position: absolute;
-  bottom: -100px;
-  right: 0;
-  background: #ffffff;
-  box-shadow: inset -10px -10px 15px rgba(211, 211, 211, 0.749), inset 10px 10px 15px rgba(190, 190, 190, 0.12);
-}
-.header__navbar .header__right .header__nav__profile ul li {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  border-bottom: 2px solid rgba(135, 135, 135, 0.8509803922);
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
 }
 
 .header.sticky {
@@ -561,6 +536,125 @@ input:focus {
   font-family: "Rubik";
   font-size: 8px;
   line-height: 150%; /* 12px */
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  background: rgba(252, 213, 186, 0.8);
+  z-index: -1;
+  opacity: 0;
+}
+.modal .modal-content {
+  top: -500px;
+  position: relative;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: #fff;
+  transition: all 0.5s;
+}
+.modal .modal-content .modal-close-btn {
+  background: transparent;
+  border: none;
+  color: #70c05b;
+}
+.modal .modal-content .modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.modal .modal-content .modal-content-form {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.modal .modal-content .modal-content-form h3 {
+  margin-bottom: 32px;
+  color: var(--main-on-surface, #414141);
+  text-align: center;
+  font-family: "Rubik";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.modal .modal-content .modal-content-form span {
+  color: var(--grayscale-hard, #8f8f8f);
+  font-family: "Rubik";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+}
+.modal .modal-content .modal-content-form input {
+  margin-bottom: 32px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--main-secondary, #70c05b);
+  background: var(--main-surface, #fff);
+  box-shadow: 4px 8px 16px 0px rgba(112, 192, 91, 0.2);
+}
+.modal .modal-content .modal-content-form input:nth-child(4) {
+  border-radius: 4px;
+  background: var(--main-primary-muted, #fcd5ba);
+  color: var(--main-primary, #f63);
+  text-align: center;
+  font-family: "Rubik";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 36px */
+  cursor: pointer;
+}
+.modal .modal-content .modal-form-links {
+  display: flex;
+  align-items: center;
+  display: flex;
+  gap: 16px;
+}
+.modal .modal-content .modal-form-links button {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--main-secondary, #70c05b);
+  background: transparent;
+  color: var(--main-secondary, #70c05b);
+  text-align: center;
+  font-family: "Rubik";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.modal .modal-content .modal-form-links a {
+  color: var(--grayscale-hardest, #606060);
+  text-align: center;
+  font-family: "Rubik";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.modal .modal__gocontent {
+  transition: all 0.5s;
+  position: relative;
+  top: 0;
+}
+
+.modal-active {
+  transition: all 0.5s;
+  opacity: 1;
+  z-index: 11111111111111;
 }
 
 .product__hero {
@@ -998,6 +1092,161 @@ input:focus {
 }
 @media (max-width: 450px) {
   .product .stock__boxes .stock__card .stock__card__intro a {
+    font-size: 16px;
+  }
+}
+.product .stock__boxes2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .product .stock__boxes2 {
+    gap: 40px;
+  }
+}
+@media (max-width: 450px) {
+  .product .stock__boxes2 {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 16px;
+  }
+}
+.product .stock__boxes2 .stock__card {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.product .stock__boxes2 .stock__card:hover {
+  border-radius: 4px;
+  background: var(--main-surface, #fff);
+  box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
+}
+.product .stock__boxes2 .stock__card:hover .stock__img {
+  transform: rotate(2deg) scale(1.1);
+}
+@media (max-width: 950px) {
+  .product .stock__boxes2 .stock__card:first-child {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .product .stock__boxes2 .stock__card:first-child {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.product .stock__boxes2 .stock__card:hover {
+  transform: scaleX(1);
+}
+.product .stock__boxes2 .stock__card .stock__img {
+  width: 100%;
+  transition: 0.3s;
+}
+.product .stock__boxes2 .stock__card .stock__card__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+.product .stock__boxes2 .stock__card .stock__card__intro img {
+  transition: 0.3s;
+}
+.product .stock__boxes2 .stock__card .stock__card__intro .stock__card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product .stock__boxes2 .stock__card .stock__card__intro .stock__card__price .stock__card__price__title h5 {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
+}
+@media (max-width: 450px) {
+  .product .stock__boxes2 .stock__card .stock__card__intro .stock__card__price .stock__card__price__title h5 {
+    color: var(--main-on-surface, #414141);
+    font-family: "Rubik";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 36px */
+  }
+}
+.product .stock__boxes2 .stock__card .stock__card__intro .stock__card__price .stock__card__price__title h6 {
+  color: var(--grayscale-hardest, #606060);
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+@media (max-width: 450px) {
+  .product .stock__boxes2 .stock__card .stock__card__intro .stock__card__price .stock__card__price__title h6 {
+    color: var(--main-on-surface, #414141);
+    font-family: "Rubik";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 36px */
+  }
+}
+.product .stock__boxes2 .stock__card .stock__card__intro .stock__card__price .stock__card__price__title p {
+  color: var(--grayscale-light, #bfbfbf);
+  font-family: "Rubik";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+}
+@media (max-width: 450px) {
+  .product .stock__boxes2 .stock__card .stock__card__intro .stock__card__price .stock__card__price__title p {
+    font-size: 8px;
+  }
+}
+.product .stock__boxes2 .stock__card .stock__card__intro h5 {
+  color: var(--main-on-surface, #414141);
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+@media (max-width: 450px) {
+  .product .stock__boxes2 .stock__card .stock__card__intro h5 {
+    font-size: 12px;
+  }
+}
+.product .stock__boxes2 .stock__card .stock__card__intro .star {
+  width: 100%;
+}
+.product .stock__boxes2 .stock__card .stock__card__intro a {
+  padding: 8px;
+  color: var(--main-secondary, #70c05b);
+  text-align: center;
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  border-radius: 4px;
+  border: 1px solid var(--main-secondary, #70c05b);
+  transition: 0.3s;
+}
+.product .stock__boxes2 .stock__card .stock__card__intro a:hover {
+  color: #fff;
+  background: var(--main-primary, #f63);
+}
+@media (max-width: 450px) {
+  .product .stock__boxes2 .stock__card .stock__card__intro a {
     font-size: 16px;
   }
 }

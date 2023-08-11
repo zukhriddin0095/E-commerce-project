@@ -127,41 +127,14 @@
         align-items: center;
         gap: 16px;
       }
-
-      a {
+      .modal-btn {
         display: flex;
-        color: var(--on-surface, #232323);
-        font-family: "Rubik";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%;
-        &::after {
-          content: "▼";
-          padding-left: 10px;
-        }
-        &:hover ~ ul {
-          display: block;
-        }
+        align-items: center;
+        gap: 10px;
+        background: transparent;
+        border: none;
       }
-      ul {
-        display: none;
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        bottom: -100px;
-        right: 0;
-        background: #ffffff;
-        box-shadow: inset -10px -10px 15px rgba(211, 211, 211, 0.749),
-          inset 10px 10px 15px rgba(190, 190, 190, 0.12);
-
-        li {
-          display: flex;
-          flex-direction: column;
-          margin-top: 10px;
-          border-bottom: 2px solid #878787d9;
-        }
-      }
+      
     }
   }
 }

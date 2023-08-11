@@ -63,13 +63,10 @@
               </div>
             </div>
             <div class="header__nav__profile">
-              <img src="./images/home/header-profile.svg" alt="img-profile" />
-              <a href="#">Алексей </a>
-              <ul>
-                <li><p href="#">dropdown</p></li>
-                <li><p href="#">dropdown2</p></li>
-                <li><p href="#">dropdown3</p></li>
-              </ul>
+              <button class="modal-btn">
+                <img src="./images/home/header-profile.svg" alt="img-profile" />
+                Алексей
+             </button>
             </div>
           </div>
         </nav>
@@ -270,6 +267,23 @@
       </section>
     </footer>
 
+    <div class="modal">
+          <div class="modal-content">
+            <div class="modal-close">
+              <button class="modal-close-btn">❌</button>
+            </div>
+            <form action="" class="modal-content-form">
+              <h3>Вход</h3>
+              <span>Телефон</span>
+              <input type="number" placeholder="telefon nomer">
+              <input type="submit" value="Вход">
+              <div class="modal-form-links">
+                <button>Регистрация</button>
+                <a href="/">Забыли пароль?</a>
+              </div>
+            </form>
+          </div>
+        </div>
   <script src="./js/main.js"></script>
 </body>
 </html>
