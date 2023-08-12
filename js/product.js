@@ -4,17 +4,26 @@ const favoriteCard = document.querySelector(".stock__boxes");
 const discountCard = document.querySelector(".stock__boxes2");
 const productbascet = document.querySelector(".hero__basket__aside");
 const productTitlePrice = document.querySelector(".basket__bside__price");
+const productName = document.querySelector(".hero__wrapper");
 
 function getElCard(pr) {
+
   return `
-              <div class="basket__imgs">
-                <img src="${pr.images[1]}" alt="">
-                <img src="${pr.images[2]}" alt="">
-                <img src="${pr.images[3]}" alt="">
+              <div onclick="scrImg(event)" class="basket__imgs">
+                <img  src="${pr.images[1]}" alt="" >
+                <img  src="${pr.images[2]}" alt="">
+                <img  src="${pr.images[3]}" alt="" >
+                <img src="${pr.images[0]}" alt="">
               </div>
-              <div class="bascet__img">
-                <img src="${pr.images[0]}" alt=""> `;
+              <div  class="bascet__img">
+                <img class="katta_rasm" src="${pr.images[0]}" alt=""> `;
 }
+
+function scrImg(event) {
+  let elRasm = document.querySelector(".katta_rasm");
+ event.target.src && (elRasm.src = event.target.src);
+}
+
 function getCarPrice(pr) {
   return `
     <div class="bside__price__title">
@@ -35,7 +44,11 @@ function getPrice(pr) {
                 <div class="bside__price__title">
                   <h4>${pr.price} ₽</h4>
                   <p>С картой Северяночки</p>
-                </div>`
+                </div>`;
+}
+function getName(pr) {
+  return `<h3>Category: "  ${pr.category} "</h3>
+            <h3> name: "${pr.name}"</h3>`;
 }
 
 //////tekshirish
@@ -53,6 +66,11 @@ newArray.map((pr) => {
 newArray.map((pr) => {
   let result1 = getPrice(pr);
   productTitlePrice.innerHTML += result1;
+});
+
+newArray.map((pr) => {
+  let result2 = getName(pr);
+  productName.innerHTML += result2;
 });
 
 ///////

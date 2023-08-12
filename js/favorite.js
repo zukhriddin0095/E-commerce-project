@@ -74,6 +74,6 @@ function getProductCard({ id, images, name, description, price }) {
   return productsCard;
 }
 
-favoritesProducts.forEach(el =>  {
+favoritesProducts.forEach(el => {
   favoriteRow.append(getProductCard(el));
 });

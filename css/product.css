@@ -689,9 +689,10 @@ input:focus {
   padding-top: 27px;
 }
 .product__hero .hero__wrapper h3 {
+  padding: 15px 0;
   color: var(--main-on-surface, #414141);
   font-family: "Rubik";
-  font-size: 24px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 36px */
@@ -736,6 +737,7 @@ input:focus {
 }
 .product__hero .hero__backet {
   display: flex;
+  justify-content: space-around;
   gap: 40px;
 }
 @media (max-width: 850px) {
@@ -746,6 +748,7 @@ input:focus {
 .product__hero .hero__backet .hero__basket__aside {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
 }
 .product__hero .hero__backet .hero__basket__aside .basket__imgs {
@@ -755,10 +758,13 @@ input:focus {
   gap: 7px;
 }
 .product__hero .hero__backet .hero__basket__aside .basket__imgs img {
-  width: 100%;
+  max-width: 64px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .product__hero .hero__backet .hero__basket__aside .bascet__img img {
-  width: 100%;
+  max-width: 504px;
+  border-radius: 10px;
 }
 .product__hero .hero__backet .hero__basket__bside .basket__bside__price {
   display: flex;

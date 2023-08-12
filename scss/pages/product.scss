@@ -31,9 +31,10 @@
   .hero__wrapper {
     padding-top: 27px;
     h3 {
+      padding: 15px 0;
       color: var(--main-on-surface, #414141);
       font-family: "Rubik";
-      font-size: 24px;
+      font-size: 26px;
       font-style: normal;
       font-weight: 700;
       line-height: 150%; /* 36px */
@@ -79,6 +80,7 @@
   }
   .hero__backet {
     display: flex;
+    justify-content: space-around;
     gap: 40px;
     @media (max-width: 850px) {
       flex-direction: column;
@@ -87,6 +89,7 @@
     .hero__basket__aside {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 16px;
       .basket__imgs {
         display: flex;
@@ -94,12 +97,15 @@
         flex-direction: column;
         gap: 7px;
         img {
-          width: 100%;
+          max-width: 64px;
+          border-radius: 10px;
+          cursor: pointer;
         }
       }
       .bascet__img {
         img {
-          width: 100%;
+          max-width: 504px;
+          border-radius: 10px;
         }
       }
     }
